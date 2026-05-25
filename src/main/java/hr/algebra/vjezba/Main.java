@@ -66,7 +66,7 @@ public class Main {
             em.getTransaction().begin();
 
             Book bookToDelete = em.find(Book.class, b2.getId());
-
+            System.out.println("ID JE "+ bookToDelete.getId());
             if (bookToDelete != null) {
                 em.remove(bookToDelete);
             }

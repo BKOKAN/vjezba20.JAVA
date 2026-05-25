@@ -10,10 +10,10 @@ private Long id;
 
 private String title;
 
-@ManyToOne
+@ManyToOne(cascade = CascadeType.ALL)
 private Author author;
 
-@ManyToOne
+@ManyToOne(cascade = CascadeType.ALL)
 private Publisher publisher;
 
 public Book(){
