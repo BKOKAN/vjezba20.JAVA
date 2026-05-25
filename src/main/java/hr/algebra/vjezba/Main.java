@@ -65,7 +65,7 @@ public class Main {
 
             em.getTransaction().begin();
 
-            Book bookToDelete = em.find(Book.class, 2L);
+            Book bookToDelete = em.find(Book.class, b2.getId());
 
             if (bookToDelete != null) {
                 em.remove(bookToDelete);
@@ -79,8 +79,8 @@ public class Main {
                 System.out.println(book.getTitle());
             }
 
-            System.out.println(b1.getId());
-            System.out.println(b2.getId());
+            System.out.println("b1 id = " + b1.getId());
+            System.out.println("b2 id = " + b2.getId());
 
         } finally {
             em.close();
